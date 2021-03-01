@@ -4,5 +4,5 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import ru.aananev.spring_crud.entity.User;
 
 public interface UserRepository extends JpaRepository<User, Integer> {
-    User findByFirstname(String firstname);
+    User findByLogin(String login);
 }

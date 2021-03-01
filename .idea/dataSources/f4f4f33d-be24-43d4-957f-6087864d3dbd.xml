@@ -800,7 +800,7 @@ sequence|table|16413|16415|1
     <database id="3" parent="1" name="reso_app_db">
       <ObjectId>16421</ObjectId>
       <Owner>postgres</Owner>
-      <IntrospectionStateNumber>633</IntrospectionStateNumber>
+      <IntrospectionStateNumber>639</IntrospectionStateNumber>
       <Relations>sequence|table|16423|16425|12
 </Relations>
     </database>
@@ -1005,7 +1005,7 @@ UC/10
       <ObjectId>16422</ObjectId>
       <StateNumber>604</StateNumber>
       <Owner>postgres</Owner>
-      <IntrospectionStateNumber>634</IntrospectionStateNumber>
+      <IntrospectionStateNumber>640</IntrospectionStateNumber>
     </schema>
     <extension id="33" parent="3" name="plpgsql">
       <ObjectId>12924</ObjectId>
@@ -1128,7 +1128,7 @@ UC/10
     <table id="49" parent="32" name="user">
       <ObjectId>16425</ObjectId>
       <Owner>postgres</Owner>
-      <StateNumber>632</StateNumber>
+      <StateNumber>638</StateNumber>
     </table>
     <column id="50" parent="46" name="id">
       <Position>1</Position>
@@ -1252,11 +1252,11 @@ UC/10
       <Primary>1</Primary>
       <UnderlyingIndexName>usr_role_pkey</UnderlyingIndexName>
     </key>
-    <column id="68" parent="49" name="id">
+    <column id="68" parent="49" name="userid">
       <Position>12</Position>
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>612</StateNumber>
+      <StateNumber>635</StateNumber>
       <DefaultExpression>nextval(&apos;schema_reso.user_id_seq&apos;::regclass)</DefaultExpression>
       <TypeId>23</TypeId>
     </column>
@@ -1290,29 +1290,35 @@ UC/10
       <StateNumber>632</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <index id="74" parent="49" name="user_id_uindex">
+    <column id="74" parent="49" name="login">
+      <Position>18</Position>
+      <DataType>varchar(255)|0s</DataType>
+      <StateNumber>638</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <index id="75" parent="49" name="user_id_uindex">
       <ObjectId>16438</ObjectId>
       <StateNumber>612</StateNumber>
-      <ColNames>id</ColNames>
+      <ColNames>userid</ColNames>
       <Unique>1</Unique>
       <AccessMethodId>403</AccessMethodId>
       <CollationIds>0</CollationIds>
       <ClassIds>1978</ClassIds>
     </index>
-    <index id="75" parent="49" name="user_pk">
+    <index id="76" parent="49" name="user_pk">
       <ObjectId>16436</ObjectId>
       <StateNumber>612</StateNumber>
-      <ColNames>id</ColNames>
+      <ColNames>userid</ColNames>
       <Unique>1</Unique>
       <Primary>1</Primary>
       <AccessMethodId>403</AccessMethodId>
       <CollationIds>0</CollationIds>
       <ClassIds>1978</ClassIds>
     </index>
-    <key id="76" parent="49" name="user_pk">
+    <key id="77" parent="49" name="user_pk">
       <ObjectId>16437</ObjectId>
       <StateNumber>612</StateNumber>
-      <ColNames>id</ColNames>
+      <ColNames>userid</ColNames>
       <Primary>1</Primary>
       <UnderlyingIndexName>user_pk</UnderlyingIndexName>
     </key>

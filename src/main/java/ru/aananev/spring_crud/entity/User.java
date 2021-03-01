@@ -29,4 +29,7 @@ public class User {
 
     @Column
     private String partnertype;
+
+    @Column
+    private String login;
 }
