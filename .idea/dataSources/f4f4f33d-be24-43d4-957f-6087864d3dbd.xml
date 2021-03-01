@@ -800,7 +800,7 @@ sequence|table|16413|16415|1
     <database id="3" parent="1" name="reso_app_db">
       <ObjectId>16421</ObjectId>
       <Owner>postgres</Owner>
-      <IntrospectionStateNumber>610</IntrospectionStateNumber>
+      <IntrospectionStateNumber>633</IntrospectionStateNumber>
       <Relations>sequence|table|16423|16425|12
 </Relations>
     </database>
@@ -1005,7 +1005,7 @@ UC/10
       <ObjectId>16422</ObjectId>
       <StateNumber>604</StateNumber>
       <Owner>postgres</Owner>
-      <IntrospectionStateNumber>611</IntrospectionStateNumber>
+      <IntrospectionStateNumber>634</IntrospectionStateNumber>
     </schema>
     <extension id="33" parent="3" name="plpgsql">
       <ObjectId>12924</ObjectId>
@@ -1128,7 +1128,7 @@ UC/10
     <table id="49" parent="32" name="user">
       <ObjectId>16425</ObjectId>
       <Owner>postgres</Owner>
-      <StateNumber>607</StateNumber>
+      <StateNumber>632</StateNumber>
     </table>
     <column id="50" parent="46" name="id">
       <Position>1</Position>
@@ -1252,102 +1252,66 @@ UC/10
       <Primary>1</Primary>
       <UnderlyingIndexName>usr_role_pkey</UnderlyingIndexName>
     </key>
-    <column id="68" parent="49" name="firstname">
-      <Position>1</Position>
-      <DataType>varchar(255)|0s</DataType>
-      <StateNumber>607</StateNumber>
-      <TypeId>1043</TypeId>
-    </column>
-    <column id="69" parent="49" name="lastname">
-      <Position>2</Position>
-      <DataType>varchar(255)|0s</DataType>
-      <StateNumber>607</StateNumber>
-      <TypeId>1043</TypeId>
-    </column>
-    <column id="70" parent="49" name="middlename">
-      <Position>3</Position>
-      <DataType>varchar(255)|0s</DataType>
-      <StateNumber>607</StateNumber>
-      <TypeId>1043</TypeId>
-    </column>
-    <column id="71" parent="49" name="birthdate">
-      <Position>4</Position>
-      <DataType>varchar(10)|0s</DataType>
-      <StateNumber>607</StateNumber>
-      <TypeId>1043</TypeId>
-    </column>
-    <column id="72" parent="49" name="doctype">
-      <Position>5</Position>
-      <DataType>varchar(25)|0s</DataType>
-      <StateNumber>607</StateNumber>
-      <TypeId>1043</TypeId>
-    </column>
-    <column id="73" parent="49" name="seria">
-      <Position>6</Position>
-      <DataType>varchar(4)|0s</DataType>
-      <StateNumber>607</StateNumber>
-      <TypeId>1043</TypeId>
-    </column>
-    <column id="74" parent="49" name="number">
-      <Position>7</Position>
-      <DataType>varchar(10)|0s</DataType>
-      <StateNumber>607</StateNumber>
-      <TypeId>1043</TypeId>
-    </column>
-    <column id="75" parent="49" name="email">
-      <Position>8</Position>
-      <DataType>varchar(255)|0s</DataType>
-      <StateNumber>607</StateNumber>
-      <TypeId>1043</TypeId>
-    </column>
-    <column id="76" parent="49" name="phone">
-      <Position>9</Position>
-      <DataType>varchar(10)|0s</DataType>
-      <StateNumber>607</StateNumber>
-      <TypeId>1043</TypeId>
-    </column>
-    <column id="77" parent="49" name="actual">
-      <Position>10</Position>
-      <DataType>varchar(3)|0s</DataType>
-      <StateNumber>607</StateNumber>
-      <TypeId>1043</TypeId>
-    </column>
-    <column id="78" parent="49" name="photo">
-      <Position>11</Position>
-      <DataType>varchar(255)|0s</DataType>
-      <StateNumber>607</StateNumber>
-      <TypeId>1043</TypeId>
-    </column>
-    <column id="79" parent="49" name="id">
+    <column id="68" parent="49" name="id">
       <Position>12</Position>
-      <DataType>bigint|0s</DataType>
+      <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>607</StateNumber>
+      <StateNumber>612</StateNumber>
       <DefaultExpression>nextval(&apos;schema_reso.user_id_seq&apos;::regclass)</DefaultExpression>
-      <TypeId>20</TypeId>
+      <TypeId>23</TypeId>
     </column>
-    <index id="80" parent="49" name="user_id_uindex">
-      <ObjectId>16432</ObjectId>
-      <StateNumber>608</StateNumber>
+    <column id="69" parent="49" name="firstname">
+      <Position>13</Position>
+      <DataType>varchar(255)|0s</DataType>
+      <StateNumber>628</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="70" parent="49" name="lastname">
+      <Position>14</Position>
+      <DataType>varchar(255)|0s</DataType>
+      <StateNumber>629</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="71" parent="49" name="middlename">
+      <Position>15</Position>
+      <DataType>varchar(255)|0s</DataType>
+      <StateNumber>630</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="72" parent="49" name="birthdate">
+      <Position>16</Position>
+      <DataType>varchar(10)|0s</DataType>
+      <StateNumber>631</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="73" parent="49" name="partnertype">
+      <Position>17</Position>
+      <DataType>varchar(8)|0s</DataType>
+      <StateNumber>632</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <index id="74" parent="49" name="user_id_uindex">
+      <ObjectId>16438</ObjectId>
+      <StateNumber>612</StateNumber>
       <ColNames>id</ColNames>
       <Unique>1</Unique>
       <AccessMethodId>403</AccessMethodId>
       <CollationIds>0</CollationIds>
-      <ClassIds>3124</ClassIds>
+      <ClassIds>1978</ClassIds>
     </index>
-    <index id="81" parent="49" name="user_pk">
-      <ObjectId>16433</ObjectId>
-      <StateNumber>609</StateNumber>
+    <index id="75" parent="49" name="user_pk">
+      <ObjectId>16436</ObjectId>
+      <StateNumber>612</StateNumber>
       <ColNames>id</ColNames>
       <Unique>1</Unique>
       <Primary>1</Primary>
       <AccessMethodId>403</AccessMethodId>
       <CollationIds>0</CollationIds>
-      <ClassIds>3124</ClassIds>
+      <ClassIds>1978</ClassIds>
     </index>
-    <key id="82" parent="49" name="user_pk">
-      <ObjectId>16434</ObjectId>
-      <StateNumber>609</StateNumber>
+    <key id="76" parent="49" name="user_pk">
+      <ObjectId>16437</ObjectId>
+      <StateNumber>612</StateNumber>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
       <UnderlyingIndexName>user_pk</UnderlyingIndexName>
